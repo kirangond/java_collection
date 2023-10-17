@@ -252,3 +252,39 @@ $ git branch
 
 gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (october_changes)
 
+--creating branch from gitbash
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (october_changes)
+$ git branch october_testing
+
+--it will create branch october_testing with latest code from october_changes
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (october_changes)
+$ git branch
+  master
+* october_changes
+  october_testing
+
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (october_changes)
+$ git checkout october_testing
+Switched to branch 'october_testing'
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (october_testing)
+$ git status
+On branch october_testing
+nothing to commit, working tree clean
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (october_testing)
+$ git push origin october_testing
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'october_testing' on GitHub by visiting:
+remote:      https://github.com/kirangond/java_collection/pull/new/october_testing
+remote:
+To https://github.com/kirangond/java_collection.git
+ * [new branch]      october_testing -> october_testing
+
+
+
+
