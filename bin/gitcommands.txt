@@ -1,0 +1,254 @@
+
+october 17
+--created project in company laptop.
+--exported as zipped file
+--imported into the C:\collection_project path
+
+opened the workspace till C:\collection_project path
+imported project into the eclipse upto C:\collection_project\pankaj-collection
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection
+$ git init
+Initialized empty Git repository in C:/collection_project/pankaj-collection/.git/
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$
+
+
+Repo Name: java_collection
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git clone https://github.com/kirangond/java_collection.git
+Cloning into 'java_collection'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        .classpath
+        .project
+        .settings/
+        bin/
+        java_collection/
+        src/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git add .
+warning: adding embedded git repository: java_collection
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint:
+hint:   git submodule add <url> java_collection
+hint:
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint:
+hint:   git rm --cached java_collection
+hint:
+hint: See "git help submodule" for more information.
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   .classpath
+        new file:   .project
+        new file:   .settings/org.eclipse.jdt.core.prefs
+        new file:   bin/com/hashmap/A.class
+        new file:   bin/com/hashtable/A.class
+        new file:   bin/com/list/arraylist/A.class
+        new file:   bin/com/list/arraylist/A1.class
+        new file:   bin/com/list/linkedlist/A.class
+        new file:   bin/com/list/linkedlist/A1.class
+        new file:   bin/com/list/linkedlist/A3.class
+        new file:   bin/com/list/linkedlist/Employee.class
+        new file:   bin/com/set/A.class
+        new file:   bin/com/set/A1.class
+        new file:   bin/com/set/A2.class
+        new file:   bin/com/set/HashTableExample.class
+        new file:   java_collection
+        new file:   src/com/hashmap/A.java
+        new file:   src/com/hashtable/A.java
+        new file:   src/com/list/arraylist/A.java
+        new file:   src/com/list/arraylist/A1.java
+        new file:   src/com/list/linkedlist/A.java
+        new file:   src/com/list/linkedlist/A1.java
+        new file:   src/com/list/linkedlist/A3.java
+        new file:   src/com/list/linkedlist/Employee.java
+        new file:   src/com/set/A.java
+        new file:   src/com/set/A1.java
+        new file:   src/com/set/A2.java
+        new file:   src/com/set/HashTableExample.java
+
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git commit -m 'commiting changes first time'
+[master (root-commit) 41bf797] commiting changes first time
+ 28 files changed, 394 insertions(+)
+ create mode 100644 .classpath
+ create mode 100644 .project
+ create mode 100644 .settings/org.eclipse.jdt.core.prefs
+ create mode 100644 bin/com/hashmap/A.class
+ create mode 100644 bin/com/hashtable/A.class
+ create mode 100644 bin/com/list/arraylist/A.class
+ create mode 100644 bin/com/list/arraylist/A1.class
+ create mode 100644 bin/com/list/linkedlist/A.class
+ create mode 100644 bin/com/list/linkedlist/A1.class
+ create mode 100644 bin/com/list/linkedlist/A3.class
+ create mode 100644 bin/com/list/linkedlist/Employee.class
+ create mode 100644 bin/com/set/A.class
+ create mode 100644 bin/com/set/A1.class
+ create mode 100644 bin/com/set/A2.class
+ create mode 100644 bin/com/set/HashTableExample.class
+ create mode 160000 java_collection
+ create mode 100644 src/com/hashmap/A.java
+ create mode 100644 src/com/hashtable/A.java
+ create mode 100644 src/com/list/arraylist/A.java
+ create mode 100644 src/com/list/arraylist/A1.java
+ create mode 100644 src/com/list/linkedlist/A.java
+ create mode 100644 src/com/list/linkedlist/A1.java
+ create mode 100644 src/com/list/linkedlist/A3.java
+ create mode 100644 src/com/list/linkedlist/Employee.java
+ create mode 100644 src/com/set/A.java
+ create mode 100644 src/com/set/A1.java
+ create mode 100644 src/com/set/A2.java
+ create mode 100644 src/com/set/HashTableExample.java
+
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git push origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git log
+commit 41bf79768023f1bcd9e8188079ecd000cbb7403e (HEAD -> master)
+Author: kirangond <kirangond05@gmail.com>
+Date:   Tue Oct 17 22:43:25 2023 +0530
+
+    commiting changes first time
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git show 41bf79768023f1bcd9e8188079ecd000cbb7403e
+commit 41bf79768023f1bcd9e8188079ecd000cbb7403e (HEAD -> master)
+Author: kirangond <kirangond05@gmail.com>
+Date:   Tue Oct 17 22:43:25 2023 +0530
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git remote -v
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git remote add origin https://github.com/kirangond/java_collection.git
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git push -u origin master
+To https://github.com/kirangond/java_collection.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/kirangond/java_collection.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git pull origin master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 626 bytes | 0 bytes/s, done.
+From https://github.com/kirangond/java_collection
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+fatal: refusing to merge unrelated histories
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git push -u origin master
+To https://github.com/kirangond/java_collection.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'https://github.com/kirangond/java_collection.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git pull origin master --allow-unrelated-histories
+From https://github.com/kirangond/java_collection
+ * branch            master     -> FETCH_HEAD
+Merge made by the 'ort' strategy.
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 README.md
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git push -u origin master
+Enumerating objects: 49, done.
+Counting objects: 100% (49/49), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (42/42), done.
+Writing objects: 100% (48/48), 12.69 KiB | 1.27 MiB/s, done.
+Total 48 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), done.
+To https://github.com/kirangond/java_collection.git
+   8f91b41..6578731  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+
+
+created october_changes from master
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git branch
+* master
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git fetch origin october_changes
+From https://github.com/kirangond/java_collection
+ * branch            october_changes -> FETCH_HEAD
+ * [new branch]      october_changes -> origin/october_changes
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git branch
+* master
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (master)
+$ git checkout october_changes
+Switched to a new branch 'october_changes'
+Branch 'october_changes' set up to track remote branch 'october_changes' from 'origin'.
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (october_changes)
+$ git branch
+  master
+* october_changes
+
+gonda@LAPTOP-4UU3SGMU MINGW64 /c/collection_project/pankaj-collection (october_changes)
+

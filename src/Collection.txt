@@ -1,0 +1,454 @@
+
+Oct 15 
+
+Collection
+  Arrays - collection of similar elements
+  - group of objects stored in it.
+  - framework - readily available logic in it.
+  - everything in collection stored as object.
+  
+  List(Interface)
+  ArrayList
+  LinkedList
+  Vector
+  
+  ArrayList:
+  - ArrayList x = new ArrayList();
+   - By default it will create an array with size 10.
+   - If it reaches that size it will upgrade to 1.5 size dynamic in nature.
+   - consists of duplicate elements in it.
+   - reading value - Performance increases
+   - Inserting values - worst performance.
+   
+  
+package com.list.arraylist;
+
+import java.util.ArrayList;
+
+public class A1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//creating an empty array list and using Generics we can store only homogenous data in it
+		ArrayList<Integer> x = new ArrayList<Integer>();
+		
+		//adding integer value in it
+		x.add(10); //auto Boxing - storing value in object
+		
+		x.add(20);
+		
+		x.add(new Integer(30)); 
+		
+		System.out.println("add() method: "+ x);
+		
+		x.add(1, 40);
+		
+		System.out.println("add(index, value) method: "+x);
+		
+		ArrayList<Integer> y = new ArrayList<Integer>();
+		y.add(300);
+		y.add(400);
+		
+		x.addAll(1, y);
+		
+		System.out.println("add(index, collection) method: "+ x);
+		
+		if(x.contains(10))
+		{
+			System.out.println("present: ");
+		}
+		else
+		{
+			System.out.println("not present: ");
+		}
+		
+		//to get particular element based on index number
+		System.out.println(x.get(1));
+		
+		Iterator iterator = x.iterator();
+		while(iterator.hasNext())
+		{
+			System.out.println("value of x: " + iterator.next());
+		}
+		
+		x.remove(5);
+		System.out.println("remove(index) method: "+x);
+
+	}
+
+}
+
+
+o/p
+add() method: [10, 20, 30]
+add(index, value) method: [10, 40, 20, 30]
+add(index, collection) method: [10, 300, 400, 40, 20, 30]
+present: 
+300
+value of x: 10
+value of x: 300
+value of x: 400
+value of x: 40
+value of x: 20
+value of x: 30
+remove(index) method: [10, 300, 400, 40, 20]
+
+part 2
+
+oct 16 - 17/11/2020 
+LinkedList
+
+package com.list.linkedlist;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+
+public class A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//creating a new linkedlist
+	//	 LinkedList x = new LinkedList();
+	//	 LinkedList<Integer> x = new LinkedList<Integer>();
+		//works for all scenarios and below is auto upcasting
+		List<Integer> x = new LinkedList<Integer>();
+		 
+		 x.add(10); //auto boxing - wrapping of values in object
+		 
+		 x.add(20);
+		 
+		 x.add(new Integer(30));
+		 
+		 System.out.println("add() method: " + x);
+		 
+		 x.add(2, 40);
+		 
+		 System.out.println("add(index, value) method: "+x);
+		 
+		 x.remove(3);
+		 
+		 System.out.println("remove(index) method: "+ x);
+		 
+		 LinkedList y = new LinkedList();
+		 y.add(100);
+		 y.add(200);
+		 y.add(300);
+		 System.out.println("add() method: " + y);
+		 
+		 x.addAll(1, y);
+		 System.out.println("add(index, collection) method: "+ x);
+		 
+		 x.get(1);
+		 
+		 System.out.println("get() method: "+x);
+		 
+		 Iterator<Integer> iterator = x.iterator();
+		 while(iterator.hasNext())
+		 {
+			 System.out.println("value of x: "+iterator.next());
+		 }
+
+	}
+
+}
+
+o/p:
+add() method: [10, 20, 30]
+add(index, value) method: [10, 20, 40, 30]
+remove(index) method: [10, 20, 40]
+add() method: [100, 200, 300]
+add(index, collection) method: [10, 100, 200, 300, 20, 40]
+get() method: [10, 100, 200, 300, 20, 40]
+value of x: 10
+value of x: 100
+value of x: 200
+value of x: 300
+value of x: 20
+value of x: 40
+
+
+package com.list.linkedlist;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class A1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LinkedList<Integer> x = new LinkedList<Integer>();
+		x.add(10);
+		
+		x.add(20);
+		
+		System.out.println("add() method: "+x);
+		
+		x.addFirst(5);
+		
+		System.out.println("addFirst() method: "+ x);
+		
+		x.addLast(30);
+		
+		System.out.println("addLast() method: "+ x);
+
+	}
+
+}
+
+o/p: 
+add() method: [10, 20]
+addFirst() method: [5, 10, 20]
+addLast() method: [5, 10, 20, 30]
+ 
+
+
+package com.list.linkedlist;
+
+public class Employee {
+
+	private String firstName;
+	private String lastName;
+	private int age;
+	
+	public Employee(String firstName, String lastName, int age) {
+		// TODO Auto-generated constructor stub
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+	}
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+}
+
+
+package com.list.linkedlist;
+
+import java.io.ObjectInputStream.GetField;
+import java.util.LinkedList;
+
+public class A3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Employee kiran = new Employee("kiran", "mehtre", 26);
+		
+		Employee pavan = new Employee("pavan", "mehtre", 29);
+		
+		LinkedList<Employee> empDetails= new LinkedList<Employee>();
+		empDetails.add(kiran);
+		empDetails.add(pavan);
+		
+		System.out.println(empDetails);
+		
+		for(Employee employee : empDetails)
+		{
+			System.out.println(employee.getFirstName());
+			System.out.println(employee.getLastName());
+			System.out.println(employee.getAge());
+		}
+		
+		
+	}
+
+}
+
+o/p
+[com.list.linkedlist.Employee@7f12f614, com.list.linkedlist.Employee@35d9dc39]
+kiran
+mehtre
+26
+pavan
+mehtre
+29
+
+
+oct 17
+18/11/2020 
+
+Hash Table
+- data stored in hash table as key value pair, internally implemneted as array.
+- Hashing - it is technique where representing any entity in the form of interger and it is done using hashCode() method.
+- hash code is method present inside Object class in java.
+- hash table is an asscoaited array where in values are stored as key value pair.
+- collision - when two values are being stored at the same index number.
+   to solve this problem in hashtable we store data as list mapped to same index number. 
+
+public class A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String x = "kiran";
+		System.out.println(x.hashCode());
+		
+		String y = "Mia";
+		System.out.println(y.hashCode());
+
+	}
+
+}
+
+o/p
+102057473
+77349
+
+19/11/2020 
+
+--HashSet---
+package com.set;
+
+import java.util.HashSet;
+
+//hashset can't contain duplicate values in it
+public class A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		HashSet<Integer> hashSet = new HashSet<Integer>();
+		hashSet.add(10);
+		hashSet.add(20);
+		hashSet.add(30);
+		hashSet.add(new Integer(40));
+		//can consists of null value
+		hashSet.add(null);
+		//we can add duplicate but it will print only once
+		hashSet.add(10);
+		
+		System.out.println("add() method: "+hashSet);
+
+	}
+
+}
+
+o/p
+add() method: [null, 20, 40, 10, 30]
+
+package com.set;
+
+import java.util.LinkedHashSet;
+
+//LinkedHashSet
+public class A1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//maintain insertion order and contain unique elements
+		LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<Integer>();
+		linkedHashSet.add(10);
+		linkedHashSet.add(20);
+		linkedHashSet.add(30);
+		linkedHashSet.add(new Integer(40));
+		linkedHashSet.add(null);
+		linkedHashSet.add(40);
+		
+		System.out.println("add() method: "+linkedHashSet);
+
+	}
+
+}
+
+o/p
+add() method: [10, 20, 30, 40, null]
+
+
+package com.set;
+
+import java.util.TreeSet;
+
+//TreeSet
+public class A2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		TreeSet<Integer> x = new TreeSet<Integer>();
+		
+		x.add(30);
+		x.add(10);
+		x.add(40);
+		
+		System.out.println("add() method: "+x);
+
+	}
+}
+
+o/p
+add() method: [10, 30, 40]
+
+
+Hash Map
+package com.hashmap;
+
+import java.util.HashMap;
+
+public class A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		HashMap<Integer, String> studentInfo = new HashMap<Integer, String>();
+		studentInfo.put(100, "kiran");
+		studentInfo.put(200, "pavan");
+		studentInfo.put(300, "rahul");
+		
+		System.out.println("put(integer,string) method: "+studentInfo);
+
+	}
+
+}
+
+
+o/p
+put(integer,string) method: {100=kiran, 200=pavan, 300=rahul}
+
+package com.hashmap;
+
+import java.util.HashMap;
+
+public class A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		HashMap<Integer, String> studentInfo = new HashMap<Integer, String>();
+		studentInfo.put(100, "kiran");
+		studentInfo.put(200, "pavan");
+		studentInfo.put(300, "rahul");
+		
+		System.out.println("put(integer,string) method: "+studentInfo);
+		
+		
+		System.out.println("to fetch the value based on key: "+ studentInfo.get(100));
+		System.out.println("to fetch the all values from hashmap:" + studentInfo.values());
+        System.out.println("to fetch the all keys from hashmap:"+studentInfo.keySet());
+	}
+
+}
+
+o/p:
+put(integer,string) method: {100=kiran, 200=pavan, 300=rahul}
+to fetch the value based on key: kiran
+to fetch the all values from hashmap:[kiran, pavan, rahul]
+to fetch the all keys from hashmap:[100, 200, 300]
