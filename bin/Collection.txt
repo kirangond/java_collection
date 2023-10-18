@@ -452,3 +452,5 @@ put(integer,string) method: {100=kiran, 200=pavan, 300=rahul}
 to fetch the value based on key: kiran
 to fetch the all values from hashmap:[kiran, pavan, rahul]
 to fetch the all keys from hashmap:[100, 200, 300]
+
+HashMap it's not comes under collection it's comes under different interface
