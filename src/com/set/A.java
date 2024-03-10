@@ -3,6 +3,7 @@ package com.set;
 import java.util.HashSet;
 
 //hashset can't contain duplicate values in it
+//to check working or not
 public class A {
 
 	public static void main(String[] args) {
