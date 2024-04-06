@@ -82,6 +82,35 @@ element found in list
 remove(index) method:[5, 100, 200, 10, 100, 200]
 
 
+video 2 17/11/2020 - April 16 2024
+
+public class A2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		ArrayList<Integer> x = new ArrayList<Integer>();
+		//adding into array list
+		x.add(10);
+		x.add(20);
+		x.add(30);
+		
+		//fetch values from arraylist using iterator 
+		
+		Iterator y = x.iterator();
+		
+		while(y.hasNext())
+		{
+			System.out.println("elements from arraylist: " + y.next());
+		}
+	}
+
+}
+
+o/p
+elements from arraylist: 10
+elements from arraylist: 20
+elements from arraylist: 30
 
 
 
