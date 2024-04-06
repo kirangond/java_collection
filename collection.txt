@@ -1,6 +1,7 @@
 July 9
  
-2020/11/12  1:04  hr
+ video 1
+2020/11/12  1:04  hr    Revision April 6 2024 
  
 Collections 
 - Deals with object
@@ -18,11 +19,11 @@ ArrayList
   - Stores the data in the form of objects not literals 
   - maintains insertion order
   - It can consists of duplicate elements 
-  - performance - reading value constant speed, when we want to insert data in between we need to shift entire to 1 shift (decrease performace)   inserting at end(no problem)
+  - performance - reading value constant speed, when we want to insert data in between we need to shift entire to 1 shift (decrease performance)   inserting at end(no problem)
   - store heterogenous data  
   avoid heterogenous storing and store only related data type - Generics 
   Boxing - wrapping of values in object 
-  all collection package present in java.util package 
+  all collection package present in java.util package rt.jar 
   store object using add method 
   In interface we can have complete method from java 1.8
 package com.collection;
@@ -79,3 +80,12 @@ addAll(index,collection) method():[5, 20, 100, 200, 10, 100, 200]
 element found in list
 [5, 20, 100, 200, 10, 100, 200]
 remove(index) method:[5, 100, 200, 10, 100, 200]
+
+
+
+
+
+
+
+
+

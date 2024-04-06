@@ -32,7 +32,7 @@ public class A1 {
 		
 		System.out.println("add(index, collection) method: "+ x);
 		
-		if(x.contains(10))
+		if(x.contains(300))
 		{
 			System.out.println("present: ");
 		}
