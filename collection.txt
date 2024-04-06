@@ -1,0 +1,81 @@
+July 9
+ 
+2020/11/12  1:04  hr
+ 
+Collections 
+- Deals with object
+- collection/group of object 
+- row record in table stored data in seperate object 
+- collection is a framework(readily available logic in it) helps to store group of objects in it.
+
+List 
+- store item in sequence 
+- interface (consists of incomplete method's)
+- implemented using ArrayList, Vector, LinkedList in this class (incomplete method's from interface implemented in the class)
+Vector - bad performance due to synchronization(only 1 thread access at a time)
+ArrayList
+  - ArrayList x = new ArrayList(); //default initial size is  10 but not fixed (dynamic in nature) increase 1.5times if it reaches size 10
+  - Stores the data in the form of objects not literals 
+  - maintains insertion order
+  - It can consists of duplicate elements 
+  - performance - reading value constant speed, when we want to insert data in between we need to shift entire to 1 shift (decrease performace)   inserting at end(no problem)
+  - store heterogenous data  
+  avoid heterogenous storing and store only related data type - Generics 
+  Boxing - wrapping of values in object 
+  all collection package present in java.util package 
+  store object using add method 
+  In interface we can have complete method from java 1.8
+package com.collection;
+ 
+import java.util.ArrayList;
+ 
+public class ArrayListClass {
+ 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList x = new ArrayList();
+		x.add(10); //It will call the add method of List class do the processing logic
+		x.add(20); //Internally stored in object 
+		x.add(new Integer(30)); //Boxing
+		//store heterogenous data
+		x.add(10.3);
+		x.add(true); //getting warnings to use generics 
+		System.out.println(x);
+		ArrayList<Integer> y = new ArrayList<>(); //<> Generics to store similar data type
+		y.add(100);
+		y.add(200);
+		System.out.println("add method():"+y);
+		ArrayList<Integer> z = new ArrayList<>();
+		z.add(5);
+		z.add(10);
+		z.add(1, 20); //For insertion at index 1 with value 20
+		System.out.println("add(index,value) method():"+z);
+		z.addAll(y); //inserting collection of y elements to z
+		System.out.println("addAll(collection) method():"+z);
+		z.addAll(2,y); //inserting collection of y elements to z at index 2
+		System.out.println("addAll(index,collection) method():"+z);
+		if(z.contains(5)) //search operation 
+		{
+			System.out.println("element found in list");
+		}
+		else
+		{
+			System.out.println("element did not found in list");
+		}
+       System.out.println(z);
+      z.remove(1); //remove element from list at position 1
+      System.out.println("remove(index) method:" + z);
+
+	}
+ 
+}
+ 
+o/p
+[10, 20, 30, 10.3, true]
+add method():[100, 200]
+add(index,value) method():[5, 20, 10]
+addAll(collection) method():[5, 20, 10, 100, 200]
+addAll(index,collection) method():[5, 20, 100, 200, 10, 100, 200]
+element found in list
+[5, 20, 100, 200, 10, 100, 200]
+remove(index) method:[5, 100, 200, 10, 100, 200]
