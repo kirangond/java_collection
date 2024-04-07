@@ -227,7 +227,7 @@ Video 3 18/11/2020 -- April 7 2024
 Hash Table
  - data stored in hash table as key value pair
  - key might be anything integer, String, any data type
- - hashCode - convert memory address(hexadecimal) to integer value
+ - hashCode - convert memory address(hexadecimal) to integer value (present in Object class(super most class) - child to it String class)
  - internally implemented as array
  - 2 values pointing to same index - collision 
  - hashing is a technique to store integer value
