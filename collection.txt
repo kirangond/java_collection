@@ -191,7 +191,35 @@ value of x: 300
 value of x: 20
 value of x: 40
  
+ 
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		LinkedList<Integer> x = new LinkedList<Integer>();
+		x.add(10);
+		
+		x.add(20);
+		
+		System.out.println("add() method: "+x);
+		
+		x.addFirst(5);
+		
+		System.out.println("addFirst() method: "+ x);
+		
+		x.addLast(30);
+		
+		System.out.println("addLast() method: "+ x);
+
+	}
+	
+	
+o/p:
+add() method: [10, 20]
+addFirst() method: [5, 10, 20]
+addLast() method: [5, 10, 20, 30]
 
 
+
+ArrayList and LinkedList consists of duplicate elements 
 
 
