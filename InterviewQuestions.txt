@@ -1,2 +1,5 @@
 
 ArrayList when to use - whenever we want to read then only use for insertion not suitable performance decreases
+
+diff b/w ArrayList and LinkedList
+

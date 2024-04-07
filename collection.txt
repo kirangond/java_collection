@@ -113,7 +113,84 @@ elements from arraylist: 20
 elements from arraylist: 30
 
 
+Video 2 17/11/2020 April 7 2024
+--LinkedList---
 
+List
+Single linked list
+doubly linked list
+
+Single linked list
+ - node = value of object + address of next node
+ - unidirectional 
+ - dis : occupy more memory - two field one for value and other to hold address
+ 
+ doubly linked list
+  - node = add of previous node + value of object + add of next node
+  - bidirectional 
+
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//creating a new linkedlist
+	//	 LinkedList x = new LinkedList();
+	//	 LinkedList<Integer> x = new LinkedList<Integer>();
+		//works for all scenarios and below is auto upcasting
+		//internally implemented as doubly linked list 
+		List<Integer> x = new LinkedList<Integer>();
+		 
+		 x.add(10); //auto boxing - wrapping of values in object
+		 
+		 x.add(20);
+		 
+		 x.add(new Integer(30));
+		 
+		 System.out.println("add() method: " + x);
+		 
+		 x.add(2, 40);
+		 
+		 System.out.println("add(index, value) method: "+x);
+		 
+		 x.remove(3);
+		 
+		 System.out.println("remove(index) method: "+ x);
+		 
+		 LinkedList y = new LinkedList();
+		 y.add(100);
+		 y.add(200);
+		 y.add(300);
+		 System.out.println("add() method: " + y);
+		 
+		 x.addAll(1, y);
+		 System.out.println("add(index, collection) method: "+ x);
+		 
+		 x.get(1);
+		 
+		 System.out.println("get() method: "+x);
+		 
+		 Iterator<Integer> iterator = x.iterator();
+		 while(iterator.hasNext())
+		 {
+			 System.out.println("value of x: "+iterator.next());
+		 }
+
+	}
+
+
+o/p:
+ add() method: [10, 20, 30]
+add(index, value) method: [10, 20, 40, 30]
+remove(index) method: [10, 20, 40]
+add() method: [100, 200, 300]
+add(index, collection) method: [10, 100, 200, 300, 20, 40]
+get() method: [10, 100, 200, 300, 20, 40]
+value of x: 10
+value of x: 100
+value of x: 200
+value of x: 300
+value of x: 20
+value of x: 40
+ 
 
 
 
