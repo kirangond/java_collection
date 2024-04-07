@@ -222,4 +222,14 @@ addLast() method: [5, 10, 20, 30]
 
 ArrayList and LinkedList consists of duplicate elements 
 
+Video 3 18/11/2020 -- April 7 2024
+
+Hash Table
+ - data stored in hash table as key value pair
+ - key might be anything integer, String, any data type
+ - hashCode - convert memory address(hexadecimal) to integer value
+ - internally implemented as array
+ - 2 values pointing to same index - collision 
+ - hashing is a technique to store integer value
+ - 
 
