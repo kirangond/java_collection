@@ -232,4 +232,6 @@ Hash Table
  - 2 values pointing to same index - collision 
  - hashing is a technique to store integer value
  - 
+ 
+ - 
 
