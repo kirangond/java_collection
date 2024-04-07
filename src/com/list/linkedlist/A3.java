@@ -1,6 +1,7 @@
 package com.list.linkedlist;
 
 
+import java.util.Iterator;
 import java.util.LinkedList;
 
 public class A3 {
@@ -25,6 +26,12 @@ public class A3 {
 			System.out.println(employee.getAge());
 		}
 		
+		//it will print the object address not the actual values
+//		Iterator<Employee> itr = empDetails.iterator();
+//		while(itr.hasNext())
+//		{
+//			System.out.println(itr.next());
+//		}
 		
 	}
 

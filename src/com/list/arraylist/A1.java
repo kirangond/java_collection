@@ -46,6 +46,7 @@ public class A1 {
 		
 		//through iterator fetch the value from the array list
 		Iterator iterator = x.iterator();
+		System.out.println("iterator: " + iterator);
 		while(iterator.hasNext())
 		{
 			System.out.println("value of x: " + iterator.next());

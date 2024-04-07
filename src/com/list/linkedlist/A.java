@@ -13,6 +13,7 @@ public class A {
 	//	 LinkedList x = new LinkedList();
 	//	 LinkedList<Integer> x = new LinkedList<Integer>();
 		//works for all scenarios and below is auto upcasting
+		//internally implemented as doubly linked list 
 		List<Integer> x = new LinkedList<Integer>();
 		 
 		 x.add(10); //auto boxing - wrapping of values in object
