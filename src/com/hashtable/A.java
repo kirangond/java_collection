@@ -10,6 +10,9 @@ public class A {
 		
 		String y = "Mia";
 		System.out.println(y.hashCode());
+		
+		String z = "ab";
+		System.out.println(z.hashCode());
 
 	}
 

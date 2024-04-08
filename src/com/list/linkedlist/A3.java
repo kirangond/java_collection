@@ -19,6 +19,8 @@ public class A3 {
 		
 		System.out.println(empDetails);
 		
+		
+		
 		for(Employee employee : empDetails)
 		{
 			System.out.println(employee.getFirstName());
@@ -32,6 +34,15 @@ public class A3 {
 //		{
 //			System.out.println(itr.next());
 //		}
+		
+		//traditional for loop
+		for(int i=0;i<empDetails.size();i++)
+		{
+			Employee emp = empDetails.get(i);
+			System.out.println(emp.getFirstName());
+			System.out.println(emp.getLastName());
+			System.out.println(emp.getAge());
+		}
 		
 	}
 
