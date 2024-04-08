@@ -265,3 +265,11 @@ Set is interface
    
    TreeSet
    - It sorts the data and store in ascending order
+   
+   
+  HashMap
+  - content stored as key value pair
+  - key can be null or value can be null
+  - internally used hashtable
+  - hash map not synchronized
+  
