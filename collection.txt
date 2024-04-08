@@ -235,3 +235,33 @@ Hash Table
  
  - 
 
+Video 4 19/11/2020 April 8 2024
+Set is interface 
+  - HashSet
+  - TreeSet
+  
+ Queue
+  - priorityQueue
+  
+ Map
+  - HashMap
+  
+ Sets
+  - its interface
+  - cannot contain duplicate values
+  - does not maintain insertion order
+  
+  HashSet
+  -internally uses hashtable (not means it will store key value pair it means storing integer value)
+  - contain unique elements
+  - does not maintain insertion order
+  - not synchronized
+  - can have null value
+  - we can add duplicate element but it will not print
+  
+  HashSet and LinkedHashSet
+   - HashSet will not maintain insertion order
+   - LinkedHashSet maintain insertion order
+   
+   TreeSet
+   - It sorts the data and store in ascending order

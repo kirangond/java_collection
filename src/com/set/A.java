@@ -1,6 +1,7 @@
 package com.set;
 
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 
 //hashset can't contain duplicate values in it
 //to check working or not
@@ -16,9 +17,11 @@ public class A {
 		//can consists of null value
 		hashSet.add(null);
 		//we can add duplicate but it will print only once
-//		hashSet.add(10);
+		hashSet.add(10);
 		
 		System.out.println("add() method: "+hashSet);
+		
+		
 
 	}
 
