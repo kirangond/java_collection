@@ -22,6 +22,7 @@ public class A {
 		x.add(true);
 		
 		x.add("kiran");
+//		x.clear();  //delete all elements from arraylist
 		
 		System.out.println(x);
 
