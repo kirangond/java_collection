@@ -9,10 +9,10 @@ public class A {
 		String y = "abc";
 		
 		//in sorting if obj1 comes first then it will return +ve value
-		System.out.println(x.compareTo(y));
+		System.out.println(x.compareTo(y)); //23
 		
 		//if obj2 comes first then it will return -ve value
-		System.out.println(y.compareTo(x));
+		System.out.println(y.compareTo(x)); //-23
 
 
 	}

@@ -251,6 +251,7 @@ Set is interface
   - cannot contain duplicate values
   - does not maintain insertion order
   
+
   HashSet
   -internally uses hashtable (not means it will store key value pair it means storing integer value)
   - contain unique elements
@@ -272,4 +273,31 @@ Set is interface
   - key can be null or value can be null
   - internally used hashtable
   - hash map not synchronized
+  
+  
+    Video 5 20/11/2020 April 10 2024
+  comparator
+  -it's an interface and compares object content
+	-in sorting if obj1 comes first return +ve value
+	-if obj2 comes first then -ve value
+-if both same return 0
+
+public class A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String x = "xyz";
+		String y = "abc";
+		
+		//in sorting if obj1 comes first then it will return +ve value
+		System.out.println(x.compareTo(y)); //23
+		
+		//if obj2 comes first then it will return -ve value
+		System.out.println(y.compareTo(x)); //-23
+
+
+	}
+
+}
   
