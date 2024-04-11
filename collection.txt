@@ -300,4 +300,18 @@ public class A {
 	}
 
 }
+
+20/11/2020 APril 11 2024
+Comparator
+-it's an interface and compares object content
+	-in sorting if obj1 comes first return +ve value
+	-if obj2 comes first then -ve value
+	-if both same return 0
+	
+	
+String x = "xyz";
+String y = "abc";
+
+x.compareTo(y) // 23
+y.compareTo(x) // -23
   
