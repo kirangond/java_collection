@@ -1,0 +1,239 @@
+Collection:
+ 
+- Deals with object
+- collection/group of object 
+- row record in table stored data in seperate object 
+- collection is a framework(readily available logic in it) helps to store group of objects in it.
+
+List 
+- store item in sequence 
+- interface (consists of incomplete method's)
+- implemented using ArrayList, Vector, LinkedList in this class (incomplete method's from interface implemented in the class)
+Vector - bad performance due to synchronization(only 1 thread access at a time)
+
+
+ArrayList cheat sheet
+
+-maintain insertion order
+-internally implemented as dynamic array
+-initial size array 10 as size exceed initial it becomes double
+-consists of duplicate elements
+-can store heterogenous data if we did not restrict using Generics
+
+Performance
+-reading value - better performance
+-insert in between performance decreases
+
+
+
+ArrayList x = new ArrayList() ;
+
+ArrayList<Integer> x = new ArrayList<Integer>();     // Generics
+
+x.add(10);
+x.add(new Integer(20));   //auto boxing
+x.add(2,30);
+
+ArrayList<Integer> y = new ArrayList<Integer>();
+
+x.addAll(1,y);
+
+x.contains(value);
+
+x.get(index_number)
+
+x.remove(index_number);
+
+Interator itr =x.iterator();
+
+While(itr.hasNext())
+{
+Sysout(itr.next());
+}
+
+Array and LinkedList
+Continous memory allocation
+In case linkedlist not a continuous memory allocation
+
+Arraylist and linkedlist consists of duplicate values
+
+LinkedList
+
+Single linked list
+ - node contains - value of object + address of next node
+	- Reading data unidirectional
+
+Performance
+ - adding first - good performance
+	- Adding last or in between less performance
+
+Dis
+ - more memory consumes - value and address to store
+
+Doubly linked list
+	- Node contains - address of previous node + value of object + address of next node
+	- Reading data bi directional
+	- By default implemented as doubly linked list
+
+Performace
+-adding first or last - good
+	- Inbetween performance decreases
+
+
+
+LinkedList x = new LinkedList();
+
+LinkedList<Integer> x = new LinkedList<Integer>();
+List<Integer> x = new LinkedList<Integer>(); // auto upcasting in our code base used in this way
+
+x.add(10);
+x.add(new Integer(20));
+x.add(1,40);
+
+LinkedList<Integer> y = new LinkedList<Integer>();
+x.addAll(1,y);
+
+x.addFirst(30);
+x.addLast(40);
+
+Iterator itr =x.iterator();
+While(itr.hasNext())
+{
+Sysout(itr.next());
+}
+
+
+For loop and enhanced for loop(for each loop)
+
+for(Employee employee : empDetails)
+		{
+			System.out.println(employee.getFirstName());
+			System.out.println(employee.getLastName());
+			System.out.println(employee.getAge());
+		}
+
+//simple for loop
+for(int i=0;i<empDetails.size();i++)
+		{
+			Employee emp = empDetails.get(i);
+			System.out.println(emp.getFirstName());
+			System.out.println(emp.getLastName());
+			System.out.println(emp.getAge());
+		}
+
+
+                                  Collection                                                                              Map
+
+        List                     Set                 Queue
+   - ArrayList          - HashSet         - PriorityQueue                            HashMap              Dictionary
+   - LinkedList       - TreeSet                                                                                                  HashTable
+  - Vector
+
+
+HashTable
+ hashing is a technique to store integer value
+ hashcode - converts memory address into the integer value
+ stored as key value pair
+	- 2 values pointing to same index leads to collision - to solve we store data as list mapped to same index number
+	- Hashtable are synchronized
+
+HashSet
+ - does not contain duplicate values
+	- Does not maintain insertion order
+  - it uses hashtable internally
+	- It uses hashing to inject data into the db
+	- Not synchronized
+	- Permits null value
+ 
+HashSet - LinkedHashSet
+	- Maintains insertion order
+	- Contains only unique elements
+
+
+HashSet<Integer> hashSet = new HashSet<Integer>();
+
+hashSet.add(10);
+hashSet.add(null);
+
+System.out.println("add() method: "+hashSet);
+
+LinkedHashSet - same but maintains insertion order
+
+TreeSet - sort based on ascending order and contains unique elements(can have null values)
+ - we can add duplicate elements but in o/p we won't be able to see it.
+
+HashMap
+ - content stored as key and value pair
+ - key can be null and value can be null
+	- Internally uses hash table.
+	- Inject data using hashing technique
+	- Hash map not synchronized
+	- Accessing elements faster than the db.
+	
+
+HashMap<Integer, String> studentInfo = new HashMap<Integer, String>();
+		studentInfo.put(100, "kiran");
+		studentInfo.put(200, "pavan");
+		studentInfo.put(300, "rahul");
+		
+		System.out.println("put(integer,string) method: "+studentInfo);
+		
+		
+		System.out.println("to fetch the value based on key: "+ studentInfo.get(100));
+		System.out.println("to fetch the all values from hashmap:" + studentInfo.values());
+        System.out.println("to fetch the all keys from hashmap:"+studentInfo.keySet());
+
+
+Comparator
+-it's an interface and compares object content
+	-in sorting if obj1 comes first return +ve value
+	-if obj2 comes first then -ve value
+	-if both same return 0
+	
+	
+String x = "xyz";
+String y = "abc";
+
+x.compareTo(y) // 23
+y.compareTo(x) // -23
+
+Generics
+  - restrict to specific data type
+ 
+public class A<T> {
+	
+	T val;
+	
+	A(T x)
+	{
+		this.val = x;
+		System.out.println(x);
+		
+	}
+	
+
+}
+
+
+public class B {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+         
+		//what ever A<> copied into the T
+		A<String> a1 = new A<String>("abc");
+		
+		A<Integer> a2 = new A<Integer>(100);
+		
+		A<Character> a3 = new A<Character>('a');
+	}
+
+}
+
+o/p:
+abc
+100
+a
+
+Java 9 - added jshell
+Jdk 10 - var data type
