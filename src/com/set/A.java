@@ -17,7 +17,7 @@ public class A {
 		//can consists of null value
 		hashSet.add(null);
 		//we can add duplicate but it will print only once
-		hashSet.add(10);
+//		hashSet.add(10);
 		
 		System.out.println("add() method: "+hashSet);
 		
