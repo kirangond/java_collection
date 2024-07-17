@@ -1,7 +1,7 @@
 Collection:
  
 - Deals with object
-- collection/group of object 
+- collection/group of object (rt.jar - java.util.*)
 - row record in table stored data in seperate object 
 - collection is a framework(readily available logic in it) helps to store group of objects in it.
 
@@ -24,34 +24,129 @@ Performance
 -reading value - better performance
 -insert in between performance decreases
 
+public class A {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ArrayList x = new ArrayList();
+		
+		x.add(10); //Boxing (internally it will convert into x.add(new Integer(10)));
+		
+		//adding element in ArrayList method add();
+		x.add(20);
+		
+		x.add(new Integer(30)); //by default it will convert into this type
+		
+		//we can store heterogenous elements in it
+		x.add(10.3);
+		
+		x.add(true);
+		
+		x.add("kiran");
+//		x.clear();  //delete all elements from arraylist
+		
+		System.out.println(x);
 
-ArrayList x = new ArrayList() ;
+	}
 
-ArrayList<Integer> x = new ArrayList<Integer>();     // Generics
-
-x.add(10);
-x.add(new Integer(20));   //auto boxing
-x.add(2,30);
-
-ArrayList<Integer> y = new ArrayList<Integer>();
-
-x.addAll(1,y);
-
-x.contains(value);
-
-x.get(index_number)
-
-x.remove(index_number);
-
-Interator itr =x.iterator();
-
-While(itr.hasNext())
-{
-Sysout(itr.next());
 }
 
-Array and LinkedList
+o/p:
+[10, 20, 30, 10.3, true, kiran]
+
+
+public class A1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		//creating an empty array list and using Generics we can store only homogenous data in it
+		ArrayList<Integer> x = new ArrayList<Integer>();
+		
+		//adding integer value in it
+		x.add(10); //auto Boxing - storing value in object
+		
+		x.add(20);
+		
+		x.add(new Integer(30)); 
+		
+		System.out.println("add() method: "+ x);
+		
+		x.add(1, 40);
+		
+		System.out.println("add(index, value) method: "+x);
+		
+		ArrayList<Integer> y = new ArrayList<Integer>();
+		y.add(300);
+		y.add(400);
+		
+		x.addAll(1, y);
+		
+		System.out.println("add(index, collection) method: "+ x);
+		
+		if(x.contains(300))
+		{
+			System.out.println("present: ");
+		}
+		else
+		{
+			System.out.println("not present: ");
+		}
+		
+		//to get particular element based on index number
+		System.out.println(x.get(1));
+		
+		//through iterator fetch the value from the array list
+		Iterator iterator = x.iterator();
+		System.out.println("iterator: " + iterator);
+		while(iterator.hasNext())
+		{
+			System.out.println("value of x: " + iterator.next());
+		}
+		
+		x.remove(5);
+		System.out.println("remove(index) method: "+x);
+
+	}
+
+}
+
+o/p:
+add() method: [10, 20, 30]
+add(index, value) method: [10, 40, 20, 30]
+add(index, collection) method: [10, 300, 400, 40, 20, 30]
+present: 
+300
+iterator: java.util.ArrayList$Itr@cac736f
+value of x: 10
+value of x: 300
+value of x: 400
+value of x: 40
+value of x: 20
+value of x: 30
+remove(index) method: [10, 300, 400, 40, 20]
+
+ArrayList Methods:
+x.add(10); // to add elements into array list  - auto boxing 
+x.add(new Integer(30)); //
+x.add(1, 40); //add at particular index
+x.addAll(1, y); //add all elements from other arraylist to x at specific position
+x.contains(300) // to check value contains or not
+x.get(1) // to get particular element based on index number
+x.remove(5); //remove value from particular index in array list
+
+We will fetch the values through iterator
+
+Iterator iterator = x.iterator();
+while(iterator.hasNext())
+	{
+		System.out.println("value of x: " + iterator.next());
+	}
+
+
+
+ArrayList vs LinkedList
 Continous memory allocation
 In case linkedlist not a continuous memory allocation
 
@@ -79,6 +174,24 @@ Performace
 -adding first or last - good
 	- Inbetween performance decreases
 
+LinkedList Methods
+
+	-  x.add(10); //add element into linked list
+	- x.add(2, 40); //add at particular index
+	- x.remove(3); //remove elements from particular index
+	-  x.addAll(1, y); //add elements from y to x at particular index
+	- x.get(1); //fetch value from particular index
+	- Fetch values
+	 Iterator<Integer> iterator = x.iterator();
+			 while(iterator.hasNext())
+			 {
+				 System.out.println("value of x: "+iterator.next());
+			 }
+   - x.addFirst(5); //add first to the linked list
+   - x.addLast(30); //add last
+  - empDetails.size(); //size of linkedlist
+	- 
+	
 
 
 LinkedList x = new LinkedList();
@@ -113,6 +226,9 @@ for(Employee employee : empDetails)
 		}
 
 //simple for loop
+
+
+
 for(int i=0;i<empDetails.size();i++)
 		{
 			Employee emp = empDetails.get(i);
@@ -137,15 +253,59 @@ HashTable
 	- 2 values pointing to same index leads to collision - to solve we store data as list mapped to same index number
 	- Hashtable are synchronized
 
+public class A {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		String x = "kiran";
+		System.out.println(x.hashCode());
+		
+		String y = "Mia";
+		System.out.println(y.hashCode());
+		
+		String z = "ab";
+		System.out.println(z.hashCode());
+
+	}
+
+}
+
+o/p:
+
+102057473
+77349
+3105
+
+
+public class HashTableExample {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Hashtable< Integer, String> hashtable=new Hashtable<Integer, String>();
+		hashtable.put(100, "kiran");
+		hashtable.put(200, "ram");
+		hashtable.put(300, "shiva");
+		System.out.println("hashtable: "+hashtable);
+	}
+
+}
+o/p:
+hashtable: {300=shiva, 200=ram, 100=kiran}
+
+
 HashSet
  - does not contain duplicate values
 	- Does not maintain insertion order
-  - it uses hashtable internally
+  - it uses hash table internally
 	- It uses hashing to inject data into the db
 	- Not synchronized
 	- Permits null value
  
-HashSet - LinkedHashSet
+HashSet - LinkedHashSet\
+
+
 	- Maintains insertion order
 	- Contains only unique elements
 
@@ -158,6 +318,29 @@ hashSet.add(null);
 System.out.println("add() method: "+hashSet);
 
 LinkedHashSet - same but maintains insertion order
+
+public class A1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//maintain insertion order and contain unique elements
+		LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<Integer>();
+		linkedHashSet.add(10);
+		linkedHashSet.add(20);
+		linkedHashSet.add(30);
+		linkedHashSet.add(new Integer(40));
+		linkedHashSet.add(null);
+		linkedHashSet.add(40);
+		
+		System.out.println("add() method: "+linkedHashSet);
+
+	}
+
+}
+
+o/p:
+add() method: [10, 20, 30, 40, null]
+
 
 TreeSet - sort based on ascending order and contains unique elements(can have null values)
  - we can add duplicate elements but in o/p we won't be able to see it.
@@ -182,6 +365,12 @@ HashMap<Integer, String> studentInfo = new HashMap<Integer, String>();
 		System.out.println("to fetch the value based on key: "+ studentInfo.get(100));
 		System.out.println("to fetch the all values from hashmap:" + studentInfo.values());
         System.out.println("to fetch the all keys from hashmap:"+studentInfo.keySet());
+
+o/p:
+put(integer,string) method: {100=kiran, 200=pavan, 300=rahul}
+to fetch the value based on key: kiran
+to fetch the all values from hashmap:[kiran, pavan, rahul]
+to fetch the all keys from hashmap:[100, 200, 300]
 
 
 Comparator
